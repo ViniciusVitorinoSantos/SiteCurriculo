@@ -8,6 +8,8 @@
 body {
     font-family: impact;
     background-color:#171810;
+    background-image: url('img/fundoCalmo.jpg');
+    background-attachment: fixed;
 }
 
 h1{
@@ -28,7 +30,6 @@ p{
 .container-interface {
     width: 960px;
     margin: auto; /*altura largura*/
-    box-shadow: 1px 1px 10px rgb(255, 255, 255);
 }
 
 #header {
@@ -88,7 +89,7 @@ section#section {
 
 aside#aside {
     background-color:#171810;
-    min-height: 200px;
+    min-height: 836.5px;
     width: 40%;
     float: right;
 }
