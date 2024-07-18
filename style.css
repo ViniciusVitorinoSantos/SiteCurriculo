@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: impact;
+    background-color:#171810;
+}
+
+h1{
+    color: #92836c;
+    text-shadow: 1px 1px 1px #4a4747aa;  
+    margin: 15px 0px 0px 15px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 20px;
+    text-align: justify;
+    font-family: Helvetica, Arial, sans-serif;
+    color: aliceblue;
+    margin: 18px;
+}
+
+.container-interface {
+    width: 960px;
+    margin: auto; /*altura largura*/
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+}
+
+#header {
+    background-color:#171810;
+    height: 200px;
+    padding: 5px;
+}
+
+div#container-logo{
+    margin-top: 10px;
+}
+
+#header #img-logo{
+    width: 370px;
+    height: 180px;
+    margin-left: 10px;
+    background-size: cover;
+}
+
+nav#menu {
+    background-color:#92836c;
+    height: 50px;
+    text-align: center;
+}
+
+nav#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+nav#menu ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 1.5s;
+}
+
+nav#menu ul li a:hover{
+    text-transform: uppercase;
+    color:#597981;
+    text-decoration: underline;
+}
+
+section#section {
+    background-color: #171810;
+    min-height: 200px;
+    width: 60%;
+    float: left;
+}
+
+aside#aside {
+    background-color:#171810;
+    min-height: 200px;
+    width: 40%;
+    float: right;
+}
+
+#img-vini{
+    width: 300px;
+    height: 300px;
+    margin-left: 35px;
+    background-size: cover;
+    padding: 10px;
+}
+
+footer#footer {
+    clear: both; /*sempre que for utilizado a propriedade float */
+    background-color:#92836c;
+    height: 30px;
+    margin-top: 30px;
+    font-family: Edwardian Script ITC , Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+
+
+footer#footer {
+    background: #92836c;
+    text-align: center;
+    padding: 20px;
+}
+
+#txt-footer{
+    margin-top: 15px;
+}
+
+footer .font-footer1{
+    font-family: Helvetica,Arial, sans-serif;
+}
+
+/* Media Queries para diferentes tamanhos de tela */
+
+@media screen and (min-width: 768px) {
+    div#interface-container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    nav#menu ul {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    nav#menu ul {
+        flex-direction: column;
+    }
+
+    nav#menu ul li {
+        margin: 10px 0;
+    }
+}
