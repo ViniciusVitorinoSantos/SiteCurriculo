@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Testes Estilos CSS</title>
+    <title>Contato - Vinícius Vitorino</title>
 </head>
 
 <body>
@@ -13,26 +13,37 @@
     <div class="container-interface">
 
         <header id="header">
-
             <div id="container-logo">
-
-                <img id="img-logo" src="img/vini-logo.png.png" alt="lgotipo vinicius vitorino">
-
+                <img id="img-logo" src="img/vini-logo.png" alt="logotipo vinicius vitorino">
             </div>
-
         </header>
 
         <nav id="menu">
-
-            <ul>
-
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="menu-items">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
-
             </ul>
-
         </nav>
+
+        <section id="section">
+            <h1>Contato</h1>
+            <p id="contatos">
+                Se você deseja entrar em contato com Vinícius Vitorino:<br><br>
+
+                E-mail:<a href="mailto:vinicius_vitorino@zohomail.com">vinicius_vitorino@zohomail.com</a>.
+                
+                <br><br>WhatsApp: <a href="https://wa.me/5541999258367">
+                    <img class="whats" src="img/whatsapp.png" alt="ícone WhatsApp">
+                </a>
+
+                <br><br>Telefone: (41) 99925-8367
+                
+            </p>
+
+        </section>
+
         <footer id="footer">
             <div id="txt-footer">
                 <span class="font-footer1">Copyright &copy; 2024 -</span> by Vinícius Vitorino<br />
@@ -41,6 +52,7 @@
 
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

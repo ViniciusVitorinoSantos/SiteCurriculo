@@ -13,26 +13,36 @@
     <div class="container-interface">
 
         <header id="header">
-
             <div id="container-logo">
-
-                <img id="img-logo" src="img/vini-logo.png.png" alt="lgotipo vinicius vitorino">
-
+                <img id="img-logo" src="img/vini-logo.png" alt="logotipo vinicius vitorino">
             </div>
-
         </header>
 
         <nav id="menu">
-
-            <ul>
-
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="menu-items">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
-
             </ul>
-
         </nav>
+
+        <section id="section">
+
+            <article class="article">
+
+            </article>
+
+
+        </section>
+        <div id="download">
+            <h1>Download do PDF</h1>
+            <p>
+                Clique no link abaixo para baixar o PDF:
+            </p>
+            <a href="download/VINICIUS VITORINO CURRICULO 2024.pdf" download="Curriculo Eletricista de manutenção industrial 2024"><img class="whats" src="img/pdfDownload.png" alt="icone de um arquivo para download"></a>
+        </div>
+
         <footer id="footer">
             <div id="txt-footer">
                 <span class="font-footer1">Copyright &copy; 2024 -</span> by Vinícius Vitorino<br />
@@ -41,6 +51,14 @@
 
     </div>
 
+
 </body>
+<script>
+    function toggleMenu() {
+        var menu = document.querySelector('.menu-items');
+        menu.classList.toggle('show');
+    }
+
+</script>
 
 </html>
