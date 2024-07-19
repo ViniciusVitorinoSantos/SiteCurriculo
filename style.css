@@ -1,117 +1,146 @@
-@charset "UTF-8";
-
-*{
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: impact;
-    background-color:#171810;
-    background-image: url('img/fundoCalmo.jpg');
-    background-attachment: fixed;
+.container-interface {
+    background-color: #171810;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-h1{
+header {
+    background-color: #171810;
+    padding: 10px;
+}
+
+#container-logo {
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    background-color: #92836c;
+}
+
+.menu-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-items li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para dispositivos móveis */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    background-color: #92836c;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-items.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+h1 {
     color: #92836c;
-    text-shadow: 1px 1px 1px #4a4747aa;  
     margin: 15px 0px 0px 15px;
 }
 
-p{
+p {
     font-family: Arial, Helvetica, sans-serif;
     text-indent: 20px;
     text-align: justify;
-    font-family: Helvetica, Arial, sans-serif;
     color: aliceblue;
     margin: 18px;
 }
 
-.container-interface {
-    width: 960px;
-    margin: auto; /*altura largura*/
-}
-
-#header {
-    background-color:#171810;
-    height: 200px;
-    padding: 5px;
-}
-
-div#container-logo{
+div#container-logo {
     margin-top: 10px;
 }
 
-#header #img-logo{
+#header #img-logo {
     width: 370px;
     height: 180px;
     margin-left: 10px;
     background-size: cover;
 }
 
-nav#menu {
-    background-color:#92836c;
-    height: 50px;
-    text-align: center;
-}
-
-nav#menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav#menu ul li {
-    display: inline-block;
-    margin-right: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 15px;
-}
-
-nav#menu ul li a {
-    color: white;
-    text-decoration: none;
-    transition: 1.5s;
-}
-
-nav#menu ul li a:hover{
-    text-transform: uppercase;
-    color:#597981;
-    text-decoration: underline;
-}
-
 section#section {
+    width: 100%;
     background-color: #171810;
     min-height: 200px;
-    width: 60%;
-    float: left;
 }
 
-aside#aside {
-    background-color:#171810;
-    min-height: 836.5px;
-    width: 40%;
-    float: right;
+div#container-colunas {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-#img-vini{
-    width: 300px;
-    height: 300px;
-    margin-left: 35px;
-    background-size: cover;
+/* CSS para centralizar imagens dentro das divs */
+div#esquerda, div#meio, div#direita {
+    flex: 1;
+    background-color: #2b2b2b;
+    padding: 10px;
+    color: #92836c;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+div#esquerda img, div#meio img, div#direita img {
+    max-width: 100%; /* Impede que a imagem ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaçamento inferior para separar imagens de texto */
+}
+
+#img-vini {
+    width: 100%;
+    height: auto;
     padding: 10px;
 }
 
 footer#footer {
-    clear: both; /*sempre que for utilizado a propriedade float */
-    background-color:#92836c;
+    background-color: #92836c;
     height: 30px;
     margin-top: 30px;
-    font-family: Edwardian Script ITC , Arial, Helvetica, sans-serif;
+    font-family: Edwardian Script ITC, Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
-
-
 
 footer#footer {
     background: #92836c;
@@ -119,33 +148,12 @@ footer#footer {
     padding: 20px;
 }
 
-#txt-footer{
+#txt-footer {
     margin-top: 15px;
+    text-decoration: none;
 }
 
-footer .font-footer1{
-    font-family: Helvetica,Arial, sans-serif;
-}
-
-/* Media Queries para diferentes tamanhos de tela */
-
-@media screen and (min-width: 768px) {
-    div#interface-container {
-        max-width: 900px;
-        margin: auto;
-    }
-
-    nav#menu ul {
-        flex-direction: row;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    nav#menu ul {
-        flex-direction: column;
-    }
-
-    nav#menu ul li {
-        margin: 10px 0;
-    }
+footer .font-footer1 {
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
 }
